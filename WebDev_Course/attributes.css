@@ -1,0 +1,312 @@
+/*
+* CSS Selectors
+*/
+
+/* Element Selector */
+element {
+  property: value;
+}
+
+/* Class Selector */
+.class-name {
+  property: value;
+}
+
+/* ID Selector */
+#element-id {
+  property: value;
+}
+
+/* Descendant Selector */
+h1 child {
+  property: value;
+}
+
+/* Group Selector */
+element1,
+element2,
+element3 {
+  property: value;
+}
+
+/*
+* Common Units of Measurement
+*/
+selector {
+  /* Absolute Units */
+  width: 300px; /* Pixels */
+  width: 2cm; /* Centimeters */
+  width: 10mm; /* Millimeters */
+  width: 1in; /* Inches */
+
+  /* Relative Units */
+  width: 50%; /* Percentage of parent */
+  width: 50vw; /* Viewport width */
+  height: 50vh; /* Viewport height */
+  font-size: 2em; /* Relative to parent font size */
+  font-size: 2rem; /* Relative to root font size */
+}
+
+/*
+* Basic Responsive Design
+*/
+/* Mobile First Approach */
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+/*
+* Text and Font Properties
+*/
+
+selector {
+  /* Font Family */
+  font-family: Arial, sans-serif; /* Sets font family with fallbacks */
+
+  /* Font Size */
+  font-size: 16px; /* Sets text size in pixels */
+  font-size: 1em; /* Relative to parent element */
+  font-size: 1rem; /* Relative to root element */
+  font-size: 100%; /* Percentage of parent size */
+
+  /* Font Weight */
+  font-weight: normal; /* Normal thickness */
+  font-weight: bold; /* Bold text */
+  font-weight: 400; /* Numeric value (100-900) */
+
+  /* Font Style */
+  font-style: normal; /* Normal text */
+  font-style: italic; /* Italic text */
+
+  /* Text Color */
+  color: #333333; /* Hexadecimal color */
+  color: rgb(51, 51, 51); /* RGB color */
+  color: black; /* Named color */
+
+  /* Text Alignment */
+  text-align: left; /* Align text to left */
+  text-align: center; /* Center text */
+  text-align: right; /* Align text to right */
+  text-align: justify; /* Justify text */
+
+  /* Text Decoration */
+  text-decoration: none; /* Remove underline */
+  text-decoration: underline; /* Underline text */
+  text-decoration: line-through; /* Strikethrough */
+
+  /* Text Transformation */
+  text-transform: uppercase; /* All uppercase */
+  text-transform: lowercase; /* All lowercase */
+  text-transform: capitalize; /* Capitalize each word */
+
+  /* Line Height */
+  line-height: 1.5; /* Space between lines */
+  line-height: 24px; /* Fixed line height */
+
+  /* Letter Spacing */
+  letter-spacing: 1px; /* Space between characters */
+  letter-spacing: normal; /* Default spacing */
+
+  /* Text Shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* horizontal vertical blur color */
+}
+
+/*
+* Background Properties
+*/
+
+selector {
+  /* Background Color */
+  background-color: #ffffff; /* Solid background color */
+  background-color: transparent; /* Transparent background */
+
+  /* Background Image */
+  background-image: url("image.jpg"); /* Image as background */
+  background-image: none; /* No background image */
+
+  /* Background Repeat */
+  background-repeat: repeat; /* Repeat in both directions */
+  background-repeat: no-repeat; /* Don't repeat */
+  background-repeat: repeat-x; /* Repeat horizontally */
+  background-repeat: repeat-y; /* Repeat vertically */
+
+  /* Background Position */
+  background-position: center center; /* Position image */
+  background-position: left top; /* Top left corner */
+  background-position: 50% 50%; /* Percentage positioning */
+
+  /* Background Size */
+  background-size: cover; /* Cover entire element */
+  background-size: contain; /* Fit within element */
+  background-size: 100px 200px; /* Specific dimensions */
+}
+
+/* 
+* Box Model Properties
+*/
+
+selector {
+  /* Width and Height */
+  width: 100%; /* Percentage of parent */
+  width: 300px; /* Fixed width in pixels */
+  height: auto; /* Automatic height */
+  height: 200px; /* Fixed height */
+
+  /* Margins - Space outside element */
+  margin: 20px; /* All sides */
+  margin: 10px 20px; /* Top/Bottom Right/Left */
+  margin: 10px 20px 15px 25px; /* Top Right Bottom Left */
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  margin: 0 auto; /* Center horizontally */
+
+  /* Padding - Space inside element */
+  padding: 20px; /* All sides */
+  padding: 10px 20px; /* Top/Bottom Right/Left */
+  padding: 10px 20px 15px 25px; /* Top Right Bottom Left */
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+
+  /* Borders */
+  border: 1px solid #cccccc; /* width style color */
+  border-width: 2px; /* Border thickness */
+  border-style: solid; /* Line style */
+  border-style: dashed; /* Dashed line */
+  border-style: dotted; /* Dotted line */
+  border-color: #000000; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  border-radius: 50%; /* Circular element */
+
+  /* Box Sizing */
+  box-sizing: content-box; /* Default - width/height exclude padding/border */
+  box-sizing: border-box; /* Width/height include padding/border */
+}
+
+/*
+* Display and Positioning
+*/
+
+selector {
+  /* Display */
+  display: block; /* Block-level element */
+  display: inline; /* Inline element */
+  display: inline-block; /* Inline but with block properties */
+  display: none; /* Hide element completely */
+  display: flex; /* Flexbox layout */
+
+  /* Position */
+  position: static; /* Default positioning */
+  position: relative; /* Relative to normal position */
+  position: absolute; /* Relative to nearest positioned ancestor */
+  position: fixed; /* Relative to viewport */
+  position: sticky; /* Sticks when scrolling */
+
+  /* Positioning Values */
+  top: 0; /* Distance from top */
+  right: 0; /* Distance from right */
+  bottom: 0; /* Distance from bottom */
+  left: 0; /* Distance from left */
+
+  /* Z-index */
+  z-index: 10; /* Stacking order */
+
+  /* Overflow */
+  overflow: visible; /* Content visible outside element */
+  overflow: hidden; /* Hide overflowing content */
+  overflow: scroll; /* Add scrollbars */
+  overflow: auto; /* Browser decides */
+}
+
+/*
+* Flexbox Properties (for layout)
+*/
+
+.container {
+  display: flex; /* Enable flexbox */
+  flex-direction: row; /* Main axis direction */
+  flex-direction: column; /* Stack vertically */
+  justify-content: center; /* Main axis alignment */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Cross axis alignment */
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+.item {
+  flex: 1; /* Grow and shrink equally */
+  flex-grow: 1; /* Ability to grow */
+  flex-shrink: 1; /* Ability to shrink */
+  flex-basis: 200px; /* Initial size */
+  align-self: center; /* Individual alignment */
+}
+
+/*
+* List Properties
+*/
+
+selector {
+  /* List Style Type */
+  list-style-type: disc; /* Filled circles */
+  list-style-type: circle; /* Hollow circles */
+  list-style-type: square; /* Squares */
+  list-style-type: decimal; /* Numbers */
+  list-style-type: none; /* No markers */
+
+  /* List Style Position */
+  list-style-position: outside; /* Default */
+  list-style-position: inside; /* Markers inside content */
+
+  /* List Style Image */
+  list-style-image: url("bullet.png"); /* Custom bullet */
+}
+
+/*
+* Link and Interactive States
+*/
+
+/* Link States */
+a:link {
+  /* Unvisited links */
+  color: blue;
+  text-decoration: underline;
+}
+
+a:visited {
+  /* Visited links */
+  color: purple;
+}
+
+a:hover {
+  /* Mouse over link */
+  color: red;
+  text-decoration: none;
+}
+
+a:active {
+  /* While clicking link */
+  color: green;
+}
+
+/* Focus State for Accessibility */
+a:focus {
+  outline: 2px solid blue;
+}
