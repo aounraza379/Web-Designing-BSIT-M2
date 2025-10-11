@@ -27,7 +27,7 @@
       <h1>WebDev Course</h1>
     </header>
 
-    <main>
+    <main class="content-wrapper">
       <section class="content-section">
         <h2>Welcome to Our Web Development Course</h2>
 
@@ -74,20 +74,12 @@
   </div>
 
   <script>
-
     const sidebar = document.querySelector(".sidebar");
     const menuToggle = document.getElementById("menu-toggle");
 
     menuToggle.addEventListener("click", () => {
       sidebar.classList.toggle("show");
     });
-  const navLinks = document.getElementById("nav-links");
-
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-    menuToggle.classList.toggle("open");
-  });
-
   </script>
 </body>
 </html>
