@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>WebDev Course - Products</title>
+</head>
+<body class="bg-[#f9f9f9] text-[#333] font-['Segoe_UI',_Tahoma,_Geneva,_Verdana,_sans-serif] flex flex-col min-h-screen">
+  <!-- Sidebar Navbar -->
+  <aside id="sidebar" class="sidebar fixed top-0 left-0 w-full bg-[#2c3e50] p-4 flex flex-col md:flex-row justify-between items-center gap-4 transition-transform duration-300 ease-in-out z-[1000] transform -translate-y-full md:transform-none md:translate-y-0">
+    <div class="logo text-white text-xl font-bold w-full md:w-auto flex justify-between items-center">
+      <span>WebDev</span>
+      <button id="close-menu" class="text-white text-2xl md:hidden">✕</button>
+    </div>
+    <nav class="w-full md:w-auto">
+      <ul class="nav-links flex flex-col md:flex-row gap-2 md:gap-4 list-none w-full">
+        <li class="w-full md:w-auto"><a href="index.html" class="text-white no-underline font-medium block p-2 rounded transition-colors duration-200 hover:bg-[#2980b9] text-center md:text-left">Home</a></li>
+        <li class="w-full md:w-auto"><a href="registration.html" class="text-white no-underline font-medium block p-2 rounded transition-colors duration-200 hover:bg-[#2980b9] text-center md:text-left">Registration</a></li>
+        <li class="w-full md:w-auto"><a href="products.html" class="text-white no-underline font-medium block p-2 rounded transition-colors duration-200 hover:bg-[#2980b9] text-center md:text-left bg-[#2980b9]">Products</a></li>
+        <li class="w-full md:w-auto"><a href="contact.html" class="text-white no-underline font-medium block p-2 rounded transition-colors duration-200 hover:bg-[#2980b9] text-center md:text-left">Contact Us</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <div class="main-content w-full flex-1 flex flex-col mt-0 md:mt-16">
+    <header class="site-header flex justify-between items-center mb-4 p-4 md:p-0">
+      <button id="menu-toggle" class="menu-toggle text-2xl bg-transparent border-none cursor-pointer text-[#2c3e50] p-2 transition-transform duration-300 ease-in-out md:hidden">☰</button>
+      <h1 class="mt-5 text-2xl text-[#2c3e50] text-center flex-1 md:text-3xl">Our Products</h1>
+    </header>
+
+    <main class="p-4 md:p-6">
+      <section class="content-section">
+        <article class="mb-8">
+          <h2 class="text-[#2c3e50] mb-4 text-xl md:text-2xl">Web Development Courses</h2>
+          <div class="overflow-x-auto">
+            <table class="styled-table w-full border-collapse my-6 text-sm md:text-base rounded-lg overflow-hidden shadow-md min-w-[600px]">
+              <caption class="caption-top font-bold p-2 text-[#2c3e50]">Course Offerings and Pricing</caption>
+              <thead class="bg-[#3498db] text-white">
+                <tr>
+                  <th class="p-3 md:p-4 border border-gray-300 text-left">Course Name</th>
+                  <th class="p-3 md:p-4 border border-gray-300 text-left">Duration</th>
+                  <th class="p-3 md:p-4 border border-gray-300 text-left">Level</th>
+                  <th class="p-3 md:p-4 border border-gray-300 text-left">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="even:bg-[#f9f9f9] hover:bg-[#eef6ff]">
+                  <td class="p-3 md:p-4 border border-gray-300">HTML5 Fundamentals</td>
+                  <td class="p-3 md:p-4 border border-gray-300">4 weeks</td>
+                  <td class="p-3 md:p-4 border border-gray-300">Beginner</td>
+                  <td class="p-3 md:p-4 border border-gray-300">$99</td>
+                </tr>
+                <tr class="even:bg-[#f9f9f9] hover:bg-[#eef6ff]">
+                  <td class="p-3 md:p-4 border border-gray-300">CSS3 Styling</td>
+                  <td class="p-3 md:p-4 border border-gray-300">6 weeks</td>
+                  <td class="p-3 md:p-4 border border-gray-300">Intermediate</td>
+                  <td class="p-3 md:p-4 border border-gray-300">$149</td>
+                </tr>
+                <tr class="even:bg-[#f9f9f9] hover:bg-[#eef6ff]">
+                  <td class="p-3 md:p-4 border border-gray-300">JavaScript Programming</td>
+                  <td class="p-3 md:p-4 border border-gray-300">8 weeks</td>
+                  <td class="p-3 md:p-4 border border-gray-300">Intermediate</td>
+                  <td class="p-3 md:p-4 border border-gray-300">$199</td>
+                </tr>
+                <tr class="even:bg-[#f9f9f9] hover:bg-[#eef6ff]">
+                  <td class="p-3 md:p-4 border border-gray-300">Full Stack Development</td>
+                  <td class="p-3 md:p-4 border border-gray-300">12 weeks</td>
+                  <td class="p-3 md:p-4 border border-gray-300">Advanced</td>
+                  <td class="p-3 md:p-4 border border-gray-300">$399</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="mb-8">
+          <h2 class="text-[#2c3e50] mb-4 text-xl md:text-2xl">Learning Resources</h2>
+          <ul class="styled-list my-4 ml-6 pl-4 list-square">
+            <li class="my-1">Interactive Coding Exercises</li>
+            <li class="my-1">Video Tutorials</li>
+            <li class="my-1">Project Templates</li>
+            <li class="my-1">Community Support</li>
+            <li class="my-1">Code Review Sessions</li>
+            <li class="my-1">Weekly Q&A Webinars</li>
+          </ul>
+        </article>
+
+        <article class="mb-8">
+          <h2 class="text-[#2c3e50] mb-4 text-xl md:text-2xl">Certification Programs</h2>
+          <p class="mb-4">Complete our courses to earn industry-recognized certifications that validate your web development skills.</p>
+          <details class="mb-4">
+            <summary class="cursor-pointer font-medium text-[#3498db]">View Certification Requirements</summary>
+            <ul class="styled-list my-4 ml-6 pl-4 list-square">
+              <li class="my-1">Complete all course modules</li>
+              <li class="my-1">Pass final assessment with 80% or higher</li>
+              <li class="my-1">Submit a capstone project</li>
+              <li class="my-1">Participate in community discussions</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="mb-8">
+          <h2 class="text-[#2c3e50] mb-4 text-xl md:text-2xl">Course Bundles</h2>
+          <div class="overflow-x-auto">
+            <table class="styled-table w-full border-collapse my-6 text-sm md:text-base rounded-lg overflow-hidden shadow-md min-w-[800px]">
+              <caption class="caption-top font-bold p-2 text-[#2c3e50]">Save with Our Course Bundles</caption>
+              <thead class="bg-[#3498db] text-white">
+                <tr>
+                  <th class="p-3 md:p-4 border border-gray-300 text-left">Bundle Name</th>
+                  <th class="p-3 md:p-4 border border-gray-300 text-left">Courses Included</th>
+                  <th class="p-3 md:p-4 border border-gray-300 text-left">Individual Price</th>
+                  <th class="p-3 md:p-4 border border-gray-300 text-left">Bundle Price</th>
+                  <th class="p-3 md:p-4 border border-gray-300 text-left">Savings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="even:bg-[#f9f9f9] hover:bg-[#eef6ff]">
+                  <td class="p-3 md:p-4 border border-gray-300">Frontend Foundation</td>
+                  <td class="p-3 md:p-4 border border-gray-300">HTML5 + CSS3 + JavaScript</td>
+                  <td class="p-3 md:p-4 border border-gray-300">$447</td>
+                  <td class="p-3 md:p-4 border border-gray-300">$349</td>
+                  <td class="p-3 md:p-4 border border-gray-300">$98</td>
+                </tr>
+                <tr class="even:bg-[#f9f9f9] hover:bg-[#eef6ff]">
+                  <td class="p-3 md:p-4 border border-gray-300">Complete Web Developer</td>
+                  <td class="p-3 md:p-4 border border-gray-300">All 4 Courses</td>
+                  <td class="p-3 md:p-4 border border-gray-300">$846</td>
+                  <td class="p-3 md:p-4 border border-gray-300">$599</td>
+                  <td class="p-3 md:p-4 border border-gray-300">$247</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer bg-[#2c3e50] text-white p-8 text-center w-full mt-auto">
+      <p>&copy; 2023 Web Development Course. All rights reserved.</p>
+      <nav>
+        <ul class="list-none p-0 m-4 flex flex-col md:flex-row flex-wrap justify-center gap-4 md:gap-6">
+          <li><a href="index.html" class="text-white no-underline font-medium transition-colors duration-200 hover:text-[#3498db]">Home</a></li>
+          <li><a href="registration.html" class="text-white no-underline font-medium transition-colors duration-200 hover:text-[#3498db]">Registration</a></li>
+          <li><a href="products.html" class="text-white no-underline font-medium transition-colors duration-200 hover:text-[#3498db]">Products</a></li>
+          <li><a href="contact.html" class="text-white no-underline font-medium transition-colors duration-200 hover:text-[#3498db]">Contact Us</a></li>
+        </ul>
+      </nav>
+      <p class="my-2 text-sm">This website demonstrates HTML5 semantic structure with CSS styling.</p>
+    </footer>
+  </div>
+
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const menuToggle = document.getElementById("menu-toggle");
+    const closeMenu = document.getElementById("close-menu");
+
+    menuToggle.addEventListener("click", () => {
+      sidebar.classList.remove("-translate-y-full");
+      sidebar.classList.add("translate-y-0");
+    });
+
+    closeMenu.addEventListener("click", () => {
+      sidebar.classList.remove("translate-y-0");
+      sidebar.classList.add("-translate-y-full");
+    });
+
+    // Close menu when clicking on a link (mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          sidebar.classList.remove("translate-y-0");
+          sidebar.classList.add("-translate-y-full");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
