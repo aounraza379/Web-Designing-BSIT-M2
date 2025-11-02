@@ -1,145 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Foodie's Paradise</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Foodie's Paradise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+
+    @layer utilities {
+      @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeIn { animation: fadeIn 0.9s ease-in-out forwards; }
+    }
+
+    .perspective { perspective: 1500px; }
+    .preserve-3d { transform-style: preserve-3d; }
+    .backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .will-change-transform { will-change: transform; }
+
+    .slider-item { transform-origin: center center; }
+
+    #slider {
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    .no-select { -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; }
+  </style>
 </head>
+<body class="bg-gradient-to-br from-white to-amber-300 overflow-x-hidden">
 
-<body>
-    <div id="mainframe"></div>
-        <!-- Navbar -->
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html" target="_blank">Menu</a></li>
-                <li><a href="about.html" target="_blank">About</a></li>
-                <li><a href="contact.html" target="_blank">Contact</a></li>
-            </ul>
-        </nav>
+  <nav class="bg-gradient-to-r from-gray-800 to-gray-900 text-white fixed w-full z-50 shadow">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <h1 class="text-2xl font-bold text-amber-400">Foodie's Paradise</h1>
+      </div>
 
-        <!-- Content Section -->
-        <div class="content">
-            <h1>Look like an <span>expert</span> <br> right from the start</h1>
-            <p>Head start your stylish food website with a gorgeous template.</p>
-            <div class="buttons">
-                <a href="menu.html"><button class="demo">Order Now!</button></a>
-                <a href="about.html"><button class="purchase">Why Us?</button></a>
-            </div>
+      <div class="hidden md:flex items-center gap-8 text-white">
+        <a href="index.html" class="hover:text-amber-400">Home</a>
+        <a href="menu.html" class="hover:text-amber-400">Menu</a>
+        <a href="about.html" class="hover:text-amber-400">About</a>
+        <a href="contact.html" class="hover:text-amber-400">Contact</a>
+      </div>
 
-            <!-- Slider Layout -->
-            <div class="diagonal-grid">
-                <img src="images/gridone.avif" alt="Food 1" class="img img1">
-                <img src="images/gridtwo.avif" alt="Food 2" class="img img2">
-                <img src="images/gridthree.avif" alt="Food 3" class="img img3">
-                <img src="images/gridfour.avif" alt="Food 4" class="img img4">
-                <img src="images/gridfive.avif" alt="Food 5" class="img img5">
-            </div>
-        </div>
+      <button id="menu-btn" class="md:hidden text-2xl focus:outline-none no-select">&#9776;</button>
     </div>
 
-    <div class="promo-banner">
-        <p>🎉 Special Offer: Get 20% off your first order! Use code: FOOD20 at checkout 🎉</p>
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-900 text-center py-4">
+      <a href="index.html" class="block py-2 hover:text-amber-400">Home</a>
+      <a href="menu.html" class="block py-2 hover:text-amber-400">Menu</a>
+      <a href="about.html" class="block py-2 hover:text-amber-400">About</a>
+      <a href="contact.html" class="block py-2 hover:text-amber-400">Contact</a>
     </div>
-    
-    <!-- Rotating Images -->
-    <div class="content-container">
-        <div class="slider-container">
-            <div class="slider">
-                <div class="slider-item" style="background-image: url('images/sliderone.avif');">
-                    <div class="item-info">
-                        <h3>Avocado Toast</h3>
-                        <p>Fresh avocado on whole grain toast</p>
-                        <div class="deal-badge">Light Night Deal</div>
-                    </div>
-                </div>
-                <div class="slider-item" style="background-image: url('images/slidertwo.avif');">
-                    <div class="item-info">
-                        <h3>Berry Chia Pudding</h3>
-                        <p>Chia seeds, almond milk, topped with mixed berries</p>
-                        <div class="deal-badge">Meal Deal</div>
-                    </div>
-                </div>
-                <div class="slider-item" style="background-image: url('images/sliderthree.avif');">
-                    <div class="item-info">
-                        <h3>Quinoa Veggie Bowl</h3>
-                        <p>Quinoa, chickpeas, avocado, roasted veggies</p>
-                        <div class="deal-badge">Light Night Deal</div>
-                    </div>
-                </div>
-                <div class="slider-item" style="background-image: url('images/sliderfour.avif');">
-                    <div class="item-info">
-                        <h3>Grilled Chicken Salad</h3>
-                        <p>Mixed greens, grilled chicken, lemon vinaigrette</p>
-                        <div class="deal-badge">Meal Deal</div>
-                    </div>
-                </div>
-                <div class="slider-item" style="background-image: url('images/sliderfive.avif');">
-                    <div class="item-info">
-                        <h3>Green Detox Juice</h3>
-                        <p>Kale, cucumber, lemon, green apple</p>
-                        <div class="deal-badge">Light Night Deal</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  </nav>
+
+  <header class="pt-28 px-6 md:px-16 max-w-6xl mx-auto animate-fadeIn">
+    <h2 class="text-4xl md:text-6xl font-semibold text-gray-800">
+      Look like an <span class="text-amber-500 italic">expert</span><br/> right from the start
+    </h2>
+    <p class="mt-4 text-lg text-gray-600">Head start your stylish food website with a gorgeous template.</p>
+
+    <div class="mt-6 flex gap-4">
+      <a href="menu.html" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-md transform transition hover:scale-105">Order Now!</a>
+      <a href="about.html" class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-md transform transition hover:scale-105">Why Us?</a>
     </div>
-    
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-left">
-                <h3>Foodie's Paradise</h3>
-                <p>&copy; 2024 Foodie's Paradise. All rights reserved.</p>
+
+    <div class="relative mt-16 h-[550px] hidden md:block">
+      <img src="images/gridone.avif" class="absolute top-0 left-[5%] w-[250px] rounded-lg shadow-lg -rotate-6 hover:scale-110 transition-transform duration-300" alt="">
+      <img src="images/gridtwo.avif" class="absolute top-[50px] left-[25%] w-[250px] rounded-lg shadow-lg rotate-3 hover:scale-110 transition-transform duration-300" alt="">
+      <img src="images/gridthree.avif" class="absolute top-[100px] left-[45%] w-[250px] rounded-lg shadow-lg -rotate-4 hover:scale-110 transition-transform duration-300" alt="">
+      <img src="images/gridfour.avif" class="absolute top-[150px] left-[65%] w-[250px] rounded-lg shadow-lg rotate-6 hover:scale-110 transition-transform duration-300" alt="">
+      <img src="images/gridfive.avif" class="absolute top-[200px] left-[85%] w-[250px] rounded-lg shadow-lg -rotate-3 hover:scale-110 transition-transform duration-300" alt="">
+    </div>
+  </header>
+
+  <div class="bg-orange-500 text-white text-center py-3 mt-12 animate-fadeIn">
+    Special Offer: Get 20% off your first order! Use code: <strong>FOOD20</strong>
+  </div>
+
+  <main class="mt-24 mb-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="relative w-full h-[420px] overflow-hidden perspective">
+        <div id="slider" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex justify-center items-center preserve-3d">
+          <!-- Slider items class for JS selection) -->
+          <div class="slider-item absolute w-[200px] h-[300px] bg-cover bg-center rounded-lg flex justify-center items-end text-white opacity-95 shadow-lg backface-hidden will-change-transform"
+               style="background-image: url('images/sliderone.avif');">
+            <div class="w-full bg-black/50 p-3 rounded-b-lg text-center">
+              <h3 class="text-lg font-semibold">Avocado Toast</h3>
+              <p class="text-sm">Fresh avocado on whole grain toast</p>
+              <div class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-xs font-bold rounded-md">Light Night Deal</div>
             </div>
-            <div class="footer-center">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" target="_blank">About</a></li>
-                    <li><a href="contact.html" target="_blank">Contact</a></li>
-                    <li><a href="privacy_policy.html" target="_blank">Privacy Policy</a></li>
-                </ul>
+          </div>
+
+          <div class="slider-item absolute w-[200px] h-[300px] bg-cover bg-center rounded-lg flex justify-center items-end text-white opacity-95 shadow-lg backface-hidden will-change-transform"
+               style="background-image: url('images/slidertwo.avif');">
+            <div class="w-full bg-black/50 p-3 rounded-b-lg text-center">
+              <h3 class="text-lg font-semibold">Berry Chia Pudding</h3>
+              <p class="text-sm">Chia seeds, almond milk, topped with mixed berries</p>
+              <div class="absolute top-2 left-2 bg-orange-500 px-3 py-1 text-xs font-bold rounded-md">Meal Deal</div>
             </div>
-            <div class="footer-right">
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                </ul>
+          </div>
+
+          <div class="slider-item absolute w-[200px] h-[300px] bg-cover bg-center rounded-lg flex justify-center items-end text-white opacity-95 shadow-lg backface-hidden will-change-transform"
+               style="background-image: url('images/sliderthree.avif');">
+            <div class="w-full bg-black/50 p-3 rounded-b-lg text-center">
+              <h3 class="text-lg font-semibold">Quinoa Veggie Bowl</h3>
+              <p class="text-sm">Quinoa, chickpeas, avocado, roasted veggies</p>
+              <div class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-xs font-bold rounded-md">Light Night Deal</div>
             </div>
+          </div>
+
+          <div class="slider-item absolute w-[200px] h-[300px] bg-cover bg-center rounded-lg flex justify-center items-end text-white opacity-95 shadow-lg backface-hidden will-change-transform"
+               style="background-image: url('images/sliderfour.avif');">
+            <div class="w-full bg-black/50 p-3 rounded-b-lg text-center">
+              <h3 class="text-lg font-semibold">Grilled Chicken Salad</h3>
+              <p class="text-sm">Mixed greens, grilled chicken, lemon vinaigrette</p>
+              <div class="absolute top-2 left-2 bg-orange-500 px-3 py-1 text-xs font-bold rounded-md">Meal Deal</div>
+            </div>
+          </div>
+
+          <div class="slider-item absolute w-[200px] h-[300px] bg-cover bg-center rounded-lg flex justify-center items-end text-white opacity-95 shadow-lg backface-hidden will-change-transform"
+               style="background-image: url('images/sliderfive.avif');">
+            <div class="w-full bg-black/50 p-3 rounded-b-lg text-center">
+              <h3 class="text-lg font-semibold">Green Detox Juice</h3>
+              <p class="text-sm">Kale, cucumber, lemon, green apple</p>
+              <div class="absolute top-2 left-2 bg-red-500 px-3 py-1 text-xs font-bold rounded-md">Light Night Deal</div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </main>
 
-<!-- <script src="script.js"></script> -->
-<script>
+  <footer class="bg-gray-900 text-white py-10 px-6">
+    <div class="max-w-6xl mx-auto flex flex-wrap gap-8 justify-between items-start">
+      <div class="min-w-[250px]">
+        <h3 class="text-2xl font-bold text-amber-500">Foodie's Paradise</h3>
+        <p class="mt-3 text-sm text-gray-400">&copy; 2024 Foodie's Paradise. All rights reserved.</p>
+      </div>
 
-// Get all slider items
-const items = document.querySelectorAll('.slider-item');
-const totalItems = items.length; // 5 items in total
-let angle = 0; // Initial angle for rotation
+      <div class="min-w-[200px]">
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-400 hover:text-amber-500">Home</a></li>
+          <li><a href="about.html" class="text-gray-400 hover:text-amber-500">About</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-amber-500">Contact</a></li>
+          <li><a href="privacy_policy.html" class="text-gray-400 hover:text-amber-500">Privacy Policy</a></li>
+        </ul>
+      </div>
 
-// Function to update 3D rotation for each slider item
-function rotateSlider() {
-    items.forEach((item, index) => {
-        const itemAngle = (360 / totalItems) * index; // Calculate the position for each item
-        item.style.transform = `rotateY(${itemAngle + angle}deg) translateZ(250px)`; // Apply 3D rotation and depth
+      <div class="min-w-[200px]">
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-amber-500">Facebook</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-amber-500">Instagram</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-amber-500">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn && menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
-}
 
-// Function to animate the rotation continuously
-function animateSlider() {
-    angle += 0.25; // Adjust rotation speed here
-    rotateSlider();
-    requestAnimationFrame(animateSlider); // Keeps rotating
-}
+    (function () {
+      const items = Array.from(document.querySelectorAll('#slider .slider-item'));
+      if (!items.length) return;
 
-// Start the animation when the page loads
-window.onload = function () {
-    animateSlider(); // Begin the rotation animation
-};
+      let angle = 0;
+      const total = items.length;
 
-</script>
+      function getTranslateZ() {
+        const w = Math.max(window.innerWidth || 0, document.documentElement.clientWidth || 0);
+        if (w >= 1400) return 420;
+        if (w >= 1024) return 360;
+        if (w >= 768) return 300;
+        if (w >= 480) return 220;
+        return 160; // small phones
+      }
+
+      // place items around the Y-axis circle once (initial)
+      function placeItems(initialAngle = 0) {
+        const radius = getTranslateZ();
+        items.forEach((item, i) => {
+          const itemAngle = (360 / total) * i + initialAngle;
+          // apply rotation + push outward on z axis
+          item.style.transform = `rotateY(${itemAngle}deg) translateZ(${radius}px)`;
+        });
+      }
+
+      // rotation function updates each frame
+      function rotateSlider() {
+        const radius = getTranslateZ();
+        items.forEach((item, index) => {
+          const itemAngle = (360 / total) * index;
+          item.style.transform = `rotateY(${itemAngle + angle}deg) translateZ(${radius}px)`;
+        });
+      }
+
+      // animate
+      function animate() {
+        angle += 0.25;
+        if (angle >= 360) angle -= 360;
+        rotateSlider();
+        requestAnimationFrame(animate);
+      }
+
+      // initialize positions and start animation
+      placeItems(0);
+      window.addEventListener('load', () => {
+        placeItems(0);
+        requestAnimationFrame(animate);
+      });
+
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          placeItems(angle);
+        }, 120);
+      });
+
+    })();
+  </script>
 </body>
 </html>

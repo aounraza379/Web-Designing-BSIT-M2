@@ -1,0 +1,20 @@
+.theme-red {
+    --bg: rgb(233, 61, 61);
+    --nav-bg: rgb(162, 28, 28);
+}
+
+.theme-blue {
+    --bg: rgb(162, 162, 213);
+    --nav-bg: rgb(91, 33, 182); 
+    --card-bg: rgb(79, 70, 229);
+}
+
+.theme-white {
+    --bg: white;
+    --nav-bg: rgb(229, 231, 235);
+}
+
+.theme-floral {
+    --bg: rgb(252, 220, 156);
+    --nav-bg: rgb(202, 138, 4);
+}

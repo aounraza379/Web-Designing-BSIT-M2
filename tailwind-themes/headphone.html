@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-300">
+<div class="container bg-white flex flex-col justify-center gap-10 p-10 mx-auto mt-20 rounded-3xl shadow-lg max-w-4xl md:flex-row">
+        <div class="w-30">
+            <img src="data:image/jpeg;base64,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" alt="Razer Kraken Kitty Edt Gaming Headset Quartz" class="product-image">
+        </div>
+        <div class="w-70">
+            <div class="shipping-badge bg-black rounded-2xl text-white text-sm px-4 py-2 mb-4 inline-block">
+                Free Shipping
+            </div>
+            <h1 class="product-name text-2xl mb-4">
+                Razer Kraken Kitty Edt Gaming<br>
+                Headset Quartz
+            </h1>
+    
+            <div class="pricing">
+                <span class="original-price block text-xs line-through">$799</span>
+                <span class="discounted-price text-3xl font-bold">$599</span>
+            </div>
+    
+            <p class="offer-text text-xs my-4 opacity-50">
+                This offer is valid until April 3rd or as long as stock lasts!
+            </p>
+    
+            <button class="add-to-cart-btn w-full bg-blue-700 text-white py-3 rounded-lg mb-4">
+                    Add to cart
+            </button>
+
+            <div class="flex items-center gap-2 mb-6">
+            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+            <span class="text-sm text-gray-600">50+ pcs. in stock</span>
+            </div>
+    
+            <div class="flex gap-3 w-full">
+            <button class="flex items-center justify-center gap-2 border border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold py-3 px-4 rounded-lg flex-1 transition-colors duration-200 min-w-0">
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5.5M7 13l2.5 5.5m0 0L17 21m-7.5-2.5h9"/>
+                </svg>
+                <span class="truncate">Add to cart</span>
+            </button>
+
+            <button class="flex items-center justify-center gap-2 border border-gray-300 hover:bg-gray-50 text-gray-700 font-semibold py-3 px-4 rounded-lg flex-1 transition-colors duration-200 min-w-0">
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+                <span class="truncate">Wishlist</span>
+            </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
